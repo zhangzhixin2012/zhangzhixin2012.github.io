@@ -1,45 +1,115 @@
-<html>
-    <body>
-        <h1>这是一个A+B Problem</h1>
-        <h2>点击下面的按钮开始</h2>
-        <div class="demo-box">
-            <input type="number" id="num1" value="10" style="width: 80px;">
-            <span> + </span>
-            <input type="number" id="num2" value="20" style="width: 80px;">
-            <button onclick="calculate()">计算</button>
-            <div class="output" id="calcOutput">
-                点击计算按钮查看结果
-            </div>
+<
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 添加的CSS样式 */
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        /* 让内容区域有白色背景，更清晰 */
+        .demo-box {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin: 20px 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        /* 标题样式 */
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        h2 {
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        /* 输出框样式 */
+        .output {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 18px;
+            border-left: 4px solid #667eea;
+        }
+        
+        /* 按钮样式 */
+        button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: transform 0.2s;
+        }
+        
+        button:hover {
+            transform: scale(1.05);
+        }
+        
+        /* 输入框样式 */
+        input {
+            padding: 8px;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 你的第一个程序：A+B Problem -->
+    <h1>这是一个A+B Problem</h1>
+    <h2>点击下面的按钮开始</h2>
+    <div class="demo-box">
+        <input type="number" id="num1" value="10" style="width: 80px;">
+        <span> + </span>
+        <input type="number" id="num2" value="20" style="width: 80px;">
+        <button onclick="calculate()">计算</button>
+        <div class="output" id="calcOutput">
+            点击计算按钮查看结果
         </div>
-        <script>
-            function calculate(){
-                let num1=document.getElementById('num1').value;
-                let num2=document.getElementById('num2').value;
-                num1=Number(num1);
-                num2=Number(num2);
-                let result=num1+num2;
-                let output=num1+'+'+num2+'='+result;
-                document.getElementById('calcOutput').innerHTML=output;
-            }
-        </script>
-    <body>
-        <h1>这是一个计数器</h1>
-        <h2>点击下面的按钮开始</h2>
-        <div class="demo-box">
-            
-            <button onclick="calculated()">i++</button>
-            <div class="output" id="calcoutput">
-                0
-            </div>
+    </div>
+
+    <!-- 你的第二个程序：计数器 -->
+    <h1>这是一个计数器</h1>
+    <h2>点击下面的按钮开始</h2>
+    <div class="demo-box">
+        <button onclick="calculated()">i++</button>
+        <div class="output" id="calcoutput">
+            0
         </div>
-        <script>
-            let x=0;
-            function calculated(){
-                x=Number(x);
-                x=x+1;
-                let output=x;
-                document.getElementById('calcoutput').innerHTML=output;
-            }
-        </script>
-    
+    </div>
+
+    <script>
+        function calculate(){
+            let num1=document.getElementById('num1').value;
+            let num2=document.getElementById('num2').value;
+            num1=Number(num1);
+            num2=Number(num2);
+            let result=num1+num2;
+            let output=num1+'+'+num2+'='+result;
+            document.getElementById('calcOutput').innerHTML=output;
+        }
+
+        let x=0;
+        function calculated(){
+            x=Number(x);
+            x=x+1;
+            let output=x;
+            document.getElementById('calcoutput').innerHTML=output;
+        }
+    </script>
+</body>
 </html>
